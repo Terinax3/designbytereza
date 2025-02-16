@@ -1,0 +1,27 @@
+<header class="{{#if (eq currentPath '/') }}home{{else}}not-home{{/if}}">
+    <div class="header-container">
+        <a href="/" class="logo tooltip" data-title="Home Page">
+            <img src="/content/icons/td-logo.svg" alt="Logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="/portfolio" class="{{#if (eq currentPath '/portfolio')}}active{{/if}}">Portfolio</a>
+                </li>
+                <li>
+                    <a href="/about" class="{{#if (eq currentPath '/about')}}active{{/if}}">About</a>
+                </li>
+                <li class="tooltip" data-title="Linked In">
+                    <a href="https://linkedin.com/in/tereza-dokic" target="_blank" class="linkedin-icon">
+                        <img src="/content/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+</header>
