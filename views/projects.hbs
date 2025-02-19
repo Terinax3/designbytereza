@@ -1,0 +1,11 @@
+<div class="content project-page">
+  {{> header}}
+  <h1>{{projectTitle}}</h1>
+  <img src="{{projectLogo}}" alt="Project Logo">
+  <div class="project-gallery">
+    {{#each galleryImages}}
+      <img src="{{this}}" alt="Gallery Image">
+    {{/each}}
+  </div>
+  {{> footer}}
+</div>

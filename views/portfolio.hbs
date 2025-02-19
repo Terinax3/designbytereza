@@ -1,0 +1,22 @@
+<div class="content portfolio-page">
+    <div class="portfolio-container">
+        <!-- Left Side: Grid Links -->
+        <div class="portfolio-grid">
+    {{#each portfolioItems}}
+    <a href="/portfolio/{{id}}">
+        <img src="{{this.image}}" alt="{{this.title}}" oncontextmenu="return false;">
+    </a>
+    {{/each}}
+</div>
+
+        
+        <!-- Right Side: List Links -->
+        <div class="portfolio-list">
+            <ul>
+                {{#each portfolioItems}}
+                <li><a href="{{this.link}}">{{this.title}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

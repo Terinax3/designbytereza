@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="/js/returntotop.js" defer></script>
+    <script src="/js/playback.js" defer></script>
+    <script src="/js/nolink.js" defer></script>
+    <script src="/js/togglemenu.js" defer></script>
+</head>
+<body class="{{#if isHomepage}}home{{else}}not-home{{/if}}">
+  {{> header}}
+  {{{body}}}
+   <!-- Return to Top Button -->
+  <button id="return-to-top" class="return-to-top"><img src="/content/icons/arrow.svg" alt="Arrow Up"></button>
+  {{> footer}}
+</body>
+</html>
