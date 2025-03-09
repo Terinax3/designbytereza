@@ -5,22 +5,48 @@
             <div class="item-description-container">
                 <div class="item-space">
                     <h2>{{title}}</h2>
-                    <p><strong>Y:</strong> {{year}}</p>
+                    <p><strong>Y</strong> {{year}}</p>
                 </div>
+                <h3 class="subtitle">{{subtitle}}</h3>
+                <br>
                 <div class="portfolio-item-description">
-                    {{#each description}}
-                        <p class="desctiption-item">{{this}}</p>
-                    {{/each}}
+
+                    <!-- Main Items -->
+                    <div class="description-row main unselectable">
+                        {{#each description}}
+                            {{#if (eq this.type 'main')}}
+                                <p class="description-item main-style">{{this.text}}</p>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+
+                    <!-- Minor Items -->
+                    <div class="description-row minor unselectable">
+                        {{#each description}}
+                            {{#if (eq this.type 'minor')}}
+                                <p class="description-item minor-style">{{this.text}}</p>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+
                 </div>
             </div>
+
+            {{#if link}}
+                <a href="{{link}}" target="_blank" class="portfolio-item-button {{id}}-button">
+                    {{buttonTitle}}
+                </a>
+            {{/if}}
+
 
             <div class="portfolio-item-gallery">
                 {{#each images}}
                     {{#if (isVideo this)}}
-                        <video class="portfolio-media-item" controls>
-                            <source src="{{this}}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <video class="portfolio-item-media" controls onloadedmetadata="this.volume=0.5" controlsList="nodownload">
+                        <source src="{{this}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
                     {{else}}
                         <img class="portfolio-media-item" src="{{this}}" alt="Portfolio Image" oncontextmenu="return false;">
                     {{/if}}
@@ -32,15 +58,6 @@
         </div>
 
         <!-- Right Side: Active Link List -->
-        <div class="portfolio-list">
-            <ul>
-                {{#each portfolioItems}}
-                <li> <a href="{{this.link}}" class="{{#if (eq this.link ../currentPath)}}active{{/if}}">
-                    {{this.title}}
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
+        {{> portfolio-list }}
     </div>
 </div>
