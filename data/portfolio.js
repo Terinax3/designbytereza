@@ -64,7 +64,7 @@ const portfolioItems = [
     ],
     thumbnail: "/content/gallery/thn-linkway.jpg",
     images: [
-      "/content/gallery/ok-04.jpg",
+      "/content/gallery/thn-linkway.jpg",
       "/content/items/linkway/linkway-02.jpg",
       "/content/items/linkway/linkway-03.jpg",
       "/content/items/linkway/linkway-04.jpg",
@@ -88,7 +88,7 @@ const portfolioItems = [
     ],
     thumbnail: "/content/gallery/thn-h2o.jpg",
     images: [
-      "/content/gallery/ok-01.jpg",
+      "/content/gallery/thn-h2o.jpg",
       "/content/items/h2o/ho-01.jpg",
       "/content/items/h2o/ho-03.mp4",
       "/content/items/h2o/ho-05.jpg",
